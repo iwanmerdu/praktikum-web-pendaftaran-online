@@ -1,0 +1,169 @@
+/* ========== RESET GAYA BAWAAN BROWSER ========== */
+/* Selector * memilih SEMUA elemen di halaman */
+* {
+    /* Border akan menghitung termasuk padding dan border (tidak menambah ukuran) */
+    box-sizing: border-box;
+    /* Menghilangkan margin default yang ada di elemen HTML */
+    margin: 0;
+    /* Menghilangkan padding default yang ada di elemen HTML */
+    padding: 0;
+    /* Mengatur font ke 'Segoe UI' atau alternatif lainnya untuk seluruh halaman */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ========== STYLING BODY (SELURUH ISI HALAMAN) ========== */
+/* Styling untuk body, yaitu seluruh konten yang tampil di halaman */
+body {
+    /* Warna latar belakang halaman menjadi abu-abu muda (#f4f7f6) */
+    background-color: #f4f7f6;
+    /* Warna teks default menjadi hitam (#333) */
+    color: #333;
+    /* Memberi ruang (padding) 20px di semua sisi isi halaman */
+    padding: 20px;
+}
+
+/* ========== CONTAINER UTAMA ========== */
+/* Styling untuk class .container yang membungkus form dan hasil */
+.container {
+    /* Menggunakan Flexbox untuk mengatur layout dua kolom */
+    display: flex;
+    /* Memberi jarak (gap) 20px antara item/kolom */
+    gap: 20px;
+    /* Lebar maksimal container adalah 1000px, tidak boleh lebih lebar */
+    max-width: 1000px;
+    /* Menempatkan container di tengah halaman dengan margin otomatis kiri dan kanan */
+    margin: 0 auto;
+}
+
+/* ========== STYLING SECTION FORM DAN RESULT ========== */
+/* Styling untuk class .form-section dan .result-section (kedua section) */
+.form-section, .result-section {
+    /* Warna latar belakang putih */
+    background: white;
+    /* Memberi ruang dalam (padding) 25px di semua sisi */
+    padding: 25px;
+    /* Membuat sudut box menjadi membulat dengan radius 8px */
+    border-radius: 8px;
+    /* Memberi bayangan untuk efek kedalaman pada box */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    /* Membuat kedua section memiliki ukuran yang sama (flex: 1) */
+    flex: 1;
+}
+
+/* ========== STYLING HEADING LEVEL 2 ========== */
+/* Styling untuk semua tag h2 */
+h2 {
+    /* Warna teks heading menjadi biru tua (#005f77) */
+    color: #005f77;
+    /* Garis bawah heading dengan tebal 2px dan warna biru (#00a2c6) */
+    border-bottom: 2px solid #00a2c6;
+    /* Memberi ruang di bawah teks sebelum garis bawah */
+    padding-bottom: 10px;
+    /* Memberi ruang di bawah heading ke elemen berikutnya */
+    margin-bottom: 20px;
+}
+
+/* ========== STYLING FORM GROUP ========== */
+/* Styling untuk class .form-group yang membungkus setiap input field */
+.form-group {
+    /* Memberi ruang di bawah setiap form-group (jarak antar field input) */
+    margin-bottom: 15px;
+}
+
+/* ========== STYLING LABEL ========== */
+/* Styling untuk semua tag label */
+label {
+    /* Mengubah label menjadi display block agar turun ke baris baru */
+    display: block;
+    /* Memberi ruang bawah antara label dan input field */
+    margin-bottom: 5px;
+    /* Membuat teks label menjadi tebal/bold */
+    font-weight: bold;
+}
+
+/* ========== STYLING INPUT DAN SELECT ========== */
+/* Styling untuk input text, email dan tag select (dropdown) */
+input, select {
+    /* Lebar input/select menjadi 100% dari container induknya */
+    width: 100%;
+    /* Memberi ruang dalam (padding) 10px di semua sisi */
+    padding: 10px;
+    /* Membuat border/garis tepi dengan tebal 1px dan warna abu-abu (#ccc) */
+    border: 1px solid #ccc;
+    /* Membuat sudut border sedikit membulat dengan radius 4px */
+    border-radius: 4px;
+}
+
+/* ========== STYLING TOMBOL SUBMIT ========== */
+/* Styling untuk semua tag button */
+button {
+    /* Lebar tombol menjadi 100% dari container induknya */
+    width: 100%;
+    /* Memberi ruang dalam (padding) 12px di semua sisi */
+    padding: 12px;
+    /* Warna latar belakang tombol menjadi biru (#00a2c6) */
+    background-color: #00a2c6;
+    /* Warna teks tombol menjadi putih */
+    color: white;
+    /* Menghilangkan border default tombol */
+    border: none;
+    /* Membuat sudut tombol membulat dengan radius 4px */
+    border-radius: 4px;
+    /* Mengubah cursor menjadi pointer saat hover di tombol */
+    cursor: pointer;
+    /* Mengatur ukuran font tombol menjadi 16px */
+    font-size: 16px;
+    /* Membuat teks tombol menjadi tebal/bold */
+    font-weight: bold;
+    /* Memberi transisi animasi 0.3 detik untuk property background */
+    transition: background 0.3s;
+}
+
+/* ========== STYLING HOVER TOMBOL ========== */
+/* Styling untuk tombol ketika mouse hover di atasnya */
+button:hover {
+    /* Mengubah warna latar belakang tombol menjadi biru lebih gelap (#007a99) */
+    background-color: #007a99;
+}
+
+/* ========== STYLING PESAN ERROR ========== */
+/* Styling untuk class .error-text yang menampilkan pesan error */
+.error-text {
+    /* Warna teks pesan error menjadi merah (#e74c3c) */
+    color: #e74c3c;
+    /* Memberi ruang atas antara form dan pesan error */
+    margin-top: 10px;
+    /* Mengatur ukuran font pesan error menjadi 14px (lebih kecil) */
+    font-size: 14px;
+}
+
+/* ========== STYLING HIDDEN (MENYEMBUNYIKAN ELEMEN) ========== */
+/* Styling untuk class .hidden yang menyembunyikan elemen */
+.hidden {
+    /* Mengubah display menjadi none sehingga elemen tidak ditampilkan */
+    display: none;
+}
+
+/* ========== STYLING KARTU PESERTA ========== */
+/* Styling untuk class .card-peserta yang menampilkan data peserta yang didaftar */
+.card-peserta {
+    /* Warna latar belakang kartu menjadi biru muda (#e8f6f9) */
+    background: #e8f6f9;
+    /* Membuat garis tepi kiri dengan tebal 5px dan warna biru (#00a2c6) */
+    border-left: 5px solid #00a2c6;
+    /* Memberi ruang dalam (padding) 15px di semua sisi kartu */
+    padding: 15px;
+    /* Memberi ruang bawah antar kartu peserta */
+    margin-bottom: 10px;
+    /* Membuat sudut kartu membulat dengan radius 4px */
+    border-radius: 4px;
+}
+
+/* ========== STYLING EMPTY STATE ========== */
+/* Styling untuk class .empty-state, yaitu teks ketika belum ada data */
+.empty-state {
+    /* Warna teks menjadi abu-abu (#7f8c8d) */
+    color: #7f8c8d;
+    /* Membuat teks menjadi miring/italic untuk menandakan teks placeholder */
+    font-style: italic;
+}

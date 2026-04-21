@@ -1,0 +1,84 @@
+<!-- Deklarasi tipe dokumen HTML5. Memberitahu browser ini adalah halaman HTML -->
+<!DOCTYPE html>
+<!-- Tag pembuka HTML dengan bahasa yang diatur ke Indonesia -->
+<html lang="id">
+<!-- Section kepala halaman, berisi informasi halaman yang tidak ditampilkan langsung -->
+<head>
+    <!-- Mengatur encoding karakter menjadi UTF-8 agar mendukung huruf Indonesia -->
+    <meta charset="UTF-8">
+    <!-- Membuat halaman responsif dan zoom otomatis sesuai ukuran perangkat pengguna -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Judul halaman yang muncul di tab browser -->
+    <title>Portal Pendaftaran Online</title>
+    <!-- Menghubungkan file CSS eksternal untuk styling halaman -->
+    <link rel="stylesheet" href="style.css">
+<!-- Penutup section kepala -->
+</head>
+<!-- Pembuka tag body. Semua konten yang ditampilkan pengguna berada di sini -->
+<body>
+    <!-- Tag main sebagai container utama isi halaman, dengan class "container" untuk styling -->
+    <main class="container">
+        <!-- Section pertama: bagian form untuk input data pendaftaran -->
+        <section class="form-section">
+            <!-- Heading level 2: judul form -->
+            <h2>Form Pendaftaran Pelatihan</h2>
+            <!-- Form dengan id "form-pendaftaran" untuk memanipulasi form via JavaScript -->
+            <form id="form-pendaftaran">
+                <!-- Kelompok form untuk input nama lengkap -->
+                <div class="form-group">
+                    <!-- Label yang menjelaskan input, dengan "for" yang mengarah ke id input -->
+                    <label for="namaLengkap">Nama Lengkap:</label>
+                    <!-- Input text dengan id "namaLengkap", placeholder untuk teks petunjuk -->
+                    <input type="text" id="namaLengkap" placeholder="Masukkan nama Anda">
+                </div>
+                
+                <!-- Kelompok form untuk input email -->
+                <div class="form-group">
+                    <!-- Label untuk menjelaskan input email -->
+                    <label for="email">Alamat Email:</label>
+                    <!-- Input email dengan validasi otomatis format email -->
+                    <input type="email" id="email" placeholder="contoh@email.com">
+                </div>
+                
+                <!-- Kelompok form untuk memilih program peminatan -->
+                <div class="form-group">
+                    <!-- Label untuk dropdown pemilihan program -->
+                    <label for="peminatan">Program Peminatan:</label>
+                    <!-- Dropdown select dengan id "peminatan" untuk pilihan program -->
+                    <select id="peminatan">
+                        <!-- Option default dengan value kosong, teks petunjuk -->
+                        <option value="">-- Pilih Program --</option>
+                        <!-- Option pertama: Web Development -->
+                        <option value="Web Development">Web Development</option>
+                        <!-- Option kedua: Data Science -->
+                        <option value="Data Science">Data Science</option>
+                        <!-- Option ketiga: UI/UX Design -->
+                        <option value="UI/UX Design">UI/UX Design</option>
+                    </select>
+                </div>
+
+                <!-- Tombol submit untuk mengirim form, dengan id "btn-daftar" -->
+                <button type="submit" id="btn-daftar">Daftar Sekarang</button>
+            </form>
+            <!-- Paragraf untuk menampilkan pesan error, hidden awalnya (tersembunyi) -->
+            <p id="pesan-error" class="error-text hidden"></p>
+        </section>
+
+        <!-- Section kedua: bagian untuk menampilkan data pendaftar yang berhasil didaftarkan -->
+        <section class="result-section">
+            <!-- Heading level 2: judul hasil data pendaftar -->
+            <h2>Data Peserta Terdaftar</h2>
+            <!-- Div container dengan id "output-data" tempat data pendaftar akan ditambahkan -->
+            <div id="output-data">
+                <!-- Paragraf teks placeholder ketika belum ada data -->
+                <p class="empty-state">Belum ada data pendaftar.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Menghubungkan file JavaScript eksternal "app.js" untuk menjalankan logika form -->
+    <script src="app.js"></script>
+<!-- Penutup tag body -->
+</body>
+<!-- Penutup tag HTML -->
+</html>
