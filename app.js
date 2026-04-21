@@ -14,7 +14,7 @@ const pesanError = document.getElementById('pesan-error');
 
 // ========== BAGIAN 2: MENAMBAHKAN EVENT LISTENER ==========
 // Menambahkan event listener 'submit' pada form, dijalankan saat tombol submit diklik
-formPendaftaran.addEventListener('submit', function(event) {
+formPendaftaranTekan.addEventListener('submit', function(event) {
     // Mencegah browser melakukan reload/refresh halaman ketika form disubmit (perilaku default)
     event.preventDefault();
 
@@ -57,7 +57,7 @@ formPendaftaran.addEventListener('submit', function(event) {
     // ========== BAGIAN 8: MEMASUKKAN DATA KE KARTU MENGGUNAKAN TEMPLATE LITERAL ==========
     // Mengisi konten kartu dengan HTML yang berisi data nama, email, dan peminatan
     // Template literal (backtick) memungkinkan menyisipkan variabel dengan ${variabel}
-    kartuBaru.innerHTML = `
+    kartuBaruTampil.innerHTML = `
         <!-- Menampilkan nama peserta sebagai heading level 3 -->
         <h3>${nama}</h3>
         <!-- Menampilkan email dengan label "Email:" -->
